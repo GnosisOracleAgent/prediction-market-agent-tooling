@@ -202,7 +202,7 @@ npm run Gnosis:withdraw    # Withdraw earnings
 - ✅ All security features tested and validated  
 - ✅ Zero vulnerabilities found  
 
-### 🚀 [Mainnet Test Report](https://github.com/GnosisOracleAgent/prediction-market-agent-tooling/tree/main/tests) – Full production testing on BSC Mainnet
+### 🚀 [Mainnet Test Report](https://github.com/GnosisOracleAgent/prediction-market-agent-tooling/blob/main/tests/maintestreport.md) – Full production testing on BSC Mainnet
 
 - ✅ All core functions tested with real BNB  
 - ✅ Question asking, answering, and withdrawal verified  
