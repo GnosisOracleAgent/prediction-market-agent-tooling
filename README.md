@@ -135,7 +135,7 @@ See the [Issues](https://github.com/gnosis/prediction-market-agent-tooling/issue
 
 We use `mypy` for static type checking, and `isort`, `black` and `autoflake` for linting, and `pre-commit` to minimise unwanted pushes to the public repositories. These all run as steps in CI, but `pre-commit` also needs to be installed locally using the provided `install_hooks.sh` script.
 
-## BSC deployment
+## BSC deployment (Beta-mode)
 
 ### 1. Setup
 ```bash
@@ -145,5 +145,76 @@ npm install
 # Create .env file
 cp .env.example .env
 # Add your PRIVATE_KEY and other settings
+```
+### 2. Deploy to Testnet
+```bash
+npm run deploy:GnosisAgent
+```
+This deploys SoraOracle and sets up TWAP oracles for major pairs (WBNB/BUSD, WBNB/USDT, CAKE/WBNB).
+
+### 3. Start Auto-Updater (Updates TWAP every 5 min)
+```bash
+# Add GNOSISAGENT_ORACLE_ADDRESS to .env first
+npm run GnosisAgent:auto-update
+```
+The auto-updater will continuously update TWAP prices every 5 minutes for all configured pairs.
+
+### 4. Check Prices (TWAP + Spot)
+```bash
+npm run GnosisAgent:prices
+```
+Shows both manipulation-resistant TWAP prices (for settlements) and spot prices (for display).
+
+### 5. Ask Questions
+```bash
+npm run sora:ask
+```
+Follow the prompts to ask questions with different types.
+
+### 6. Provide Answers (Oracle Provider)
+```bash
+npm run sora:answer
+```
+Follow the prompts to provide answers with confidence scores.
+
+### 7. Withdraw Earnings
+```
+npm run sora:withdraw
+```
+
+## Available Commands
+```bash
+npm run compile          # Compile contracts
+npm run test             # Run test suite
+npm run deploy:sora      # Deploy to BSC testnet
+npm run sora:auto-update # Start TWAP auto-updater (every 5 min)
+npm run sora:prices      # Check TWAP & spot prices
+npm run sora:ask         # Ask questions
+npm run sora:answer      # Provide answers
+npm run sora:withdraw    # Withdraw earnings
+```
+
+## GnosisAgent Oracle Features
+
+### Question Types
+
+| **Type** | **Use Case** | **Example** |
+|-----------|--------------|-------------|
+| **GENERAL** | Market analysis, sentiment | "What is the market sentiment for BNB?" |
+| **PRICE** | Crypto prices (can use TWAP) | "What is the BNB price in BUSD?" |
+| **YESNO** | Binary predictions | "Will BNB hit $700 in 24 hours?" |
+| **NUMERIC** | Sports scores, statistics | "How many active wallets?" |
+
+### Answer Structure
+
+Every answer includes:
+
+- **Text Answer** – Human-readable explanation  
+- **Numeric Value** – For prices/scores  
+- **Boolean** – For yes/no questions  
+- **Confidence Score** – 0–100%  
+- **Data Source** – "TWAP", "Market-Analysis", etc.  
+- **Timestamp** – When answered  
+- **Provider Address** – Who answered
 
 
