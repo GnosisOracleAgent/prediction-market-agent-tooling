@@ -138,6 +138,11 @@ We use `mypy` for static type checking, and `isort`, `black` and `autoflake` for
 
 ## BSC deployment (Beta-mode)
 
+### DISCLAIMER‼️
+The crypto prediction market is inherently volatile, and AI-driven agents operate in dynamic, rapidly changing environments. To ensure responsible deployment and protect user capital during early testing, we are introducing a deposit limit of 0.10 BNB per agent.
+
+This limit allows the system to gather live market data, refine predictive performance, and manage exposure while maintaining liquidity control. As the agents demonstrate consistent reliability across varying market conditions, deposit thresholds will be gradually increased in later phases.
+
 ### 1. Setup
 ```bash
 # Install dependencies
