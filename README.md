@@ -196,13 +196,13 @@ npm run Gnosis:withdraw    # Withdraw earnings
 ```
 ##  Stress-tested Quality
 
-### 📊 [Testnet Test Report](#) – 38/38 tests passing (100% success rate)
+### 📊 [Testnet Test Report](https://github.com/GnosisOracleAgent/prediction-market-agent-tooling/blob/main/tests/bsctests.md) – 38/38 tests passing (100% success rate)
 
 - ✅ 86.9% gas savings verified on-chain  
 - ✅ All security features tested and validated  
 - ✅ Zero vulnerabilities found  
 
-### 🚀 [Mainnet Test Report](https://github.com/GnosisOracleAgent/prediction-market-agent-tooling/blob/main/tests/bsctests.md) – Full production testing on BSC Mainnet
+### 🚀 [Mainnet Test Report](https://github.com/GnosisOracleAgent/prediction-market-agent-tooling/tree/main/tests) – Full production testing on BSC Mainnet
 
 - ✅ All core functions tested with real BNB  
 - ✅ Question asking, answering, and withdrawal verified  
