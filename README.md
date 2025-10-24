@@ -103,6 +103,7 @@ The following prediction market platforms are supported:
 | [Manifold](https://manifold.markets/) | ✅ | ✅ | ✅ |
 | [AIOmen](https://aiomen.eth.limo/)    | ✅ | ✅ | ✅ |
 | [Polymarket](https://polymarket.com/) | ✅ | ❌ | ❌ |
+| [BSC blockchain]([https://polymarket.com/](https://www.bnbchain.org/en/bnb-smart-chain)) (Currently developping) | ❌ | ❌ | ❌ |
 
 ## Prediction Markets Python API
 
@@ -148,38 +149,38 @@ cp .env.example .env
 ```
 ### 2. Deploy to Testnet
 ```bash
-npm run deploy:GnosisAgent
+npm run deploy:Gnosis
 ```
 This deploys SoraOracle and sets up TWAP oracles for major pairs (WBNB/BUSD, WBNB/USDT, CAKE/WBNB).
 
 ### 3. Start Auto-Updater (Updates TWAP every 5 min)
 ```bash
 # Add GNOSISAGENT_ORACLE_ADDRESS to .env first
-npm run GnosisAgent:auto-update
+npm run Gnosis:auto-update
 ```
 The auto-updater will continuously update TWAP prices every 5 minutes for all configured pairs.
 
 ### 4. Check Prices (TWAP + Spot)
 ```bash
-npm run GnosisAgent:prices
+npm run Gnosis:prices
 ```
 Shows both manipulation-resistant TWAP prices (for settlements) and spot prices (for display).
 
 ### 5. Ask Questions
 ```bash
-npm run sora:ask
+npm run Gnosis:ask
 ```
 Follow the prompts to ask questions with different types.
 
 ### 6. Provide Answers (Oracle Provider)
 ```bash
-npm run sora:answer
+npm run Gnosis:answer
 ```
 Follow the prompts to provide answers with confidence scores.
 
 ### 7. Withdraw Earnings
 ```
-npm run sora:withdraw
+npm run Gnosis:withdraw
 ```
 
 ## Available Commands
@@ -187,11 +188,11 @@ npm run sora:withdraw
 npm run compile          # Compile contracts
 npm run test             # Run test suite
 npm run deploy:sora      # Deploy to BSC testnet
-npm run sora:auto-update # Start TWAP auto-updater (every 5 min)
-npm run sora:prices      # Check TWAP & spot prices
-npm run sora:ask         # Ask questions
-npm run sora:answer      # Provide answers
-npm run sora:withdraw    # Withdraw earnings
+npm run Gnosis:auto-update # Start TWAP auto-updater (every 5 min)
+npm run Gnosis:prices      # Check TWAP & spot prices
+npm run Gnosis:ask         # Ask questions
+npm run Gnosis:answer      # Provide answers
+npm run Gnosis:withdraw    # Withdraw earnings
 ```
 
 ## GnosisAgent Oracle Features
