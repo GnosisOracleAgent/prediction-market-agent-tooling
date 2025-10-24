@@ -135,7 +135,10 @@ See the [Issues](https://github.com/gnosis/prediction-market-agent-tooling/issue
 
 We use `mypy` for static type checking, and `isort`, `black` and `autoflake` for linting, and `pre-commit` to minimise unwanted pushes to the public repositories. These all run as steps in CI, but `pre-commit` also needs to be installed locally using the provided `install_hooks.sh` script.
 
-1. Setup
+## BSC deployment
+
+### 1. Setup
+```bash
 # Install dependencies
 npm install
 
@@ -143,21 +146,4 @@ npm install
 cp .env.example .env
 # Add your PRIVATE_KEY and other settings
 
-2. Deploy to Testnet
-npm run deploy:sora
 
-
-This deploys SoraOracle and sets up TWAP oracles for major pairs (WBNB/BUSD, WBNB/USDT, CAKE/WBNB).
-
-3. Start Auto-Updater (updates TWAP every 5 min)
-# Add SORA_ORACLE_ADDRESS to .env first
-npm run sora:auto-update
-
-
-The auto-updater continuously updates TWAP prices every 5 minutes for all configured pairs.
-
-4. Check Prices (TWAP + Spot)
-npm run sora:prices
-
-
-Shows both manipulation-resistant TWAP prices (for settlements) and spot prices (for display).
