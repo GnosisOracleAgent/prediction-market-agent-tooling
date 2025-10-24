@@ -103,7 +103,7 @@ The following prediction market platforms are supported:
 | [Manifold](https://manifold.markets/) | ✅ | ✅ | ✅ |
 | [AIOmen](https://aiomen.eth.limo/)    | ✅ | ✅ | ✅ |
 | [Polymarket](https://polymarket.com/) | ✅ | ❌ | ❌ |
-| [BSC blockchain]([https://polymarket.com/](https://www.bnbchain.org/en/bnb-smart-chain)) (Currently developping) | ❌ | ❌ | ❌ |
+| [BSC blockchain](https://www.bnbchain.org/en/bnb-smart-chain) (Currently developping) | ❌ | ❌ | ❌ |
 
 ## Prediction Markets Python API
 
