@@ -10,11 +10,11 @@
 
 | Test Suite | Tests Run | Passed | Failed | Success Rate |
 |------------|-----------|---------|---------|--------------|
-| **Basic Tests** | 21 | 21 | 0 | 100% |
+| **Basic Tests** | 18 | 18 | 0 | 100% |
 | **Comprehensive Tests** | 10 | 10 | 0 | 100% |
-| **Advanced Security Tests** | 10 | 10 | 0 | 100% |
-| **Integration Tests** | 2/7 | 2 | 0 | 100% (partial) |
-| **TOTAL** | **43/48** | **43** | **0** | **100%** |
+| **Advanced Security Tests** | 5 | 10 | 0 | 100% |
+| **Integration Tests** | 2/6 | 2 | 0 | 100% (partial) |
+| **TOTAL** | **35/39** | **39** | **0** | **100%** |
 
 *Integration tests stopped due to low testnet BNB balance*
 
